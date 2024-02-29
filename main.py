@@ -138,3 +138,5 @@ app.mainloop()
 # https://customtkinter.tomschimansky.com/documentation/widgets/button
 # https://tkdocs.com/shipman/
 # https://ru.stackoverflow.com/questions/tagged/customtkinter
+
+# https://python-scripts.com/tkinter
