@@ -79,8 +79,9 @@ center_window(app, app_width, app_height)
 text_link = customtkinter.CTkLabel(app, text="URL: ") # text_color="lightblue"
 text_link.grid(row=0, column=0, padx=10, pady=20, sticky="e")
 
-url_var = tkinter.StringVar()
-input_link = customtkinter.CTkEntry(app, placeholder_text="Enter video link ", textvariable=url_var)
+url_var = tkinter.StringVar(value="Enter video link")
+input_link = customtkinter.CTkComboBox(app, variable=url_var, )
+# input_link = customtkinter.CTkEntry(app, placeholder_text="Enter video link ", textvariable=url_var)
 input_link.grid(row=0, column=1, padx=10, sticky="ew", columnspan=2)
 app.columnconfigure(1, weight=1)
 
