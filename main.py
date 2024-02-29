@@ -5,6 +5,7 @@ import windowError
 import urllib.request
 import io
 from PIL import Image, ImageTk
+import listUrls
 
 # вывод приложение по центру экрана
 def center_window(window, width, height):
@@ -80,8 +81,8 @@ text_link = customtkinter.CTkLabel(app, text="URL: ") # text_color="lightblue"
 text_link.grid(row=0, column=0, padx=10, pady=20, sticky="e")
 
 url_var = tkinter.StringVar(value="Enter video link")
-input_link = customtkinter.CTkComboBox(app, variable=url_var, )
-# input_link = customtkinter.CTkEntry(app, placeholder_text="Enter video link ", textvariable=url_var)
+list_urls = [url['url'] for url in listUrls.list_urls]
+input_link = customtkinter.CTkComboBox(app, variable=url_var, values=list_urls)
 input_link.grid(row=0, column=1, padx=10, sticky="ew", columnspan=2)
 app.columnconfigure(1, weight=1)
 
