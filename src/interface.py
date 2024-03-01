@@ -97,3 +97,4 @@ def create_interface(parent):
     app.columnconfigure(0, weight=1)
     
     # return app
+# https://www.lingq.com/ru/learn/en/web/reader/943661
