@@ -23,12 +23,14 @@ def center_window(window, width, height):
 
 
 # получает введенный линк и вызывает функцию вывода данных о загружаемом видео
-def show_video_data(link_video):
-    if link_video == "":
+def show_video_data():
+    downloadFile.link = input_link.get()
+
+    if downloadFile.link == "":
         windowMessage.open_window_error("Error...", "You didn't enter anything")
     else:
 
-        video = downloadFile.show_data_video(link_video)
+        video = downloadFile.show_data_video(downloadFile.link)
         if video:
             video_name.configure(state="normal")
             video_name.insert("1.0", video["title"])
@@ -96,12 +98,11 @@ def display_app(app):
     video_image.grid(row=6, column=1, padx=20, pady=20, columnspan=4)
     app.columnconfigure(1, weight=1)
 
-    link = input_link.get()
     button_download = customtkinter.CTkButton(
         app,
         text="Download",
         state="disabled",
-        command=lambda: downloadFile.download(link),
+        command=lambda: downloadFile.download,
     )
     button_download.grid(row=8, column=1, padx=20, pady=20, columnspan=2)
     app.columnconfigure(0, weight=1)

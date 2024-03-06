@@ -2,8 +2,10 @@ from pytube import YouTube
 from tkinter import messagebox
 import windowMessage, os
 
+link = ""
 
-def download(link):
+
+def download():
 
     is_download = download_video(link)
     # if link=""
